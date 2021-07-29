@@ -57,3 +57,18 @@ def test_split_one_string_with_leading_comma_result_array_of_one_without_comma()
 
     # assert
     assert result == expResult
+
+
+def test_split_one_string_with_comma_separated_words_result_array_of_two_words():
+    # arrange
+    stringToSplit = "java,python"
+    regex = ","
+    expResult = ["java", "python"]
+    result = None
+    cut = TagManipulator()
+
+    # act
+    result = cut.parse_string(stringToSplit, regex)
+
+    # assert
+    assert result == expResult
