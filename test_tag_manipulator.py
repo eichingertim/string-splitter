@@ -87,3 +87,18 @@ def test_split_one_string_with_leading_space_result_array_of_one_word_without_sp
 
     # assert
     assert result == expResult
+
+
+def test_split_one_string_with_trailing_comma_result_array_of_one_without_comma():
+    # arrange
+    stringToSplit = "java,"
+    regex = ","
+    expResult = ["java"]
+    result = None
+    cut = TagManipulator()
+
+    # act
+    result = cut.parse_string(stringToSplit, regex)
+
+    # assert
+    assert result == expResult
