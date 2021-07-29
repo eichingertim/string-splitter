@@ -10,5 +10,6 @@ class TagManipulator():
         tempResult = re.split(regex, tags)
         if(len(tempResult[0]) > 0):
             result = tempResult
+            result = [s.strip() for s in result]
 
         return result
